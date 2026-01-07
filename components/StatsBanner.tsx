@@ -18,7 +18,7 @@ const IconMap = {
 
 const StatsBanner: React.FC = () => {
   return (
-    <section className="bg-slate-900 py-16 relative overflow-hidden">
+    <section id="introduction" className="bg-slate-900 py-16 relative overflow-hidden">
       {/* Background pattern simulation */}
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       

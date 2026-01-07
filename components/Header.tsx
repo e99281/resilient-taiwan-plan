@@ -5,11 +5,26 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: '計畫簡介', href: '#' },
-    { name: '最新消息', href: '#' },
-    { name: '防災士培訓', href: '#' },
-    { name: '成果資料', href: '#' },
+    { name: '計畫簡介', href: '#introduction' },
+    { name: '最新消息', href: '#news-training' },
+    { name: '防災士培訓', href: '#news-training' },
+    { name: '關於我們', href: '#about' },
   ];
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      // 關閉手機版選單
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
@@ -18,7 +33,7 @@ const Header: React.FC = () => {
           {/* Logo Section */}
           <div className="flex items-center gap-3">
             <img
-              src="/logo.svg"
+              src={`${import.meta.env.BASE_URL}logo.svg`}
               alt="內政部消防署徽"
               className="w-12 h-12 object-contain drop-shadow-sm"
             />
@@ -35,6 +50,7 @@ const Header: React.FC = () => {
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
                   className="text-gray-600 hover:text-teal-600 font-medium transition-colors duration-200"
                 >
                   {link.name}
@@ -43,7 +59,7 @@ const Header: React.FC = () => {
             </nav>
             <button className="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
               <LogIn size={18} />
-              業務人員登入
+              登入
             </button>
           </div>
 
@@ -67,6 +83,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleSmoothScroll(e, link.href)}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
               >
                 {link.name}

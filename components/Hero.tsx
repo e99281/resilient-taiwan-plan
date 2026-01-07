@@ -54,8 +54,8 @@ const Hero: React.FC = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white border-4 border-white transform hover:scale-[1.01] transition-transform duration-500">
                 {/* Simulated Illustration using a photo for now, in real app use the SVG/Illustration from design */}
                 <img 
-                  src="https://picsum.photos/800/600?random=10" 
-                  alt="Resilient Taiwan Illustration" 
+                  src={`${import.meta.env.BASE_URL}img.png`}
+                  alt="img" 
                   className="w-full h-auto object-cover"
                 />
                 

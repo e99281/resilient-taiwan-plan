@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
              <div className="flex items-center gap-3 mb-6">
                 <img
-                  src="/logo.svg"
+                  src={`${import.meta.env.BASE_URL}logo.svg`}
                   alt="內政部消防署徽"
                   className="w-8 h-8 object-contain"
                 />

@@ -3,23 +3,23 @@ import { ShieldCheck, Leaf, ArrowRight } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-20 bg-white border-t border-gray-100">
+    <section id="about" className="py-20 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
           {/* Image Side */}
           <div className="w-full lg:w-1/2 relative group">
             <div className="absolute inset-0 bg-teal-600 rounded-2xl transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-video">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img 
-                src="https://picsum.photos/800/500?grayscale" 
+                src={`${import.meta.env.BASE_URL}img2.png`}
                 alt="Command Center" 
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                 <div className="absolute bottom-4 right-4 text-white/80 text-xs">
+                 {/* <div className="absolute bottom-4 right-4 text-white/80 text-xs">
                     National Fire Agency Emergency Operation Center
-                 </div>
+                 </div> */}
               </div>
             </div>
           </div>
