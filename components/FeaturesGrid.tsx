@@ -1,5 +1,6 @@
 import React from 'react';
 import { Lightbulb, GraduationCap, FolderOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FeaturesGrid: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const FeaturesGrid: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Card 1 */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+          <Link to="/plan-details" className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 block">
             <div className="w-14 h-14 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
               <Lightbulb size={28} />
             </div>
@@ -20,10 +21,10 @@ const FeaturesGrid: React.FC = () => {
             <p className="text-gray-500 leading-relaxed mb-6">
               了解強韌臺灣計畫的緣起、核心目標與執行策略，掌握國家防災體系脈絡。
             </p>
-            <a href="#" className="text-teal-600 font-medium hover:text-teal-800 flex items-center gap-1 group-hover:gap-2 transition-all">
+            <span className="text-teal-600 font-medium hover:text-teal-800 flex items-center gap-1 group-hover:gap-2 transition-all">
               查看詳情 <span className="text-lg">→</span>
-            </a>
-          </div>
+            </span>
+          </Link>
 
           {/* Card 2 */}
           <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">

@@ -1,25 +1,14 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import StatsBanner from './components/StatsBanner';
-import FeaturesGrid from './components/FeaturesGrid';
-import NewsAndTraining from './components/NewsAndTraining';
-import AboutSection from './components/AboutSection';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PlanDetails from './pages/PlanDetails';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Hero />
-        <StatsBanner />
-        <FeaturesGrid />
-        <NewsAndTraining />
-        <AboutSection />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/plan-details" element={<PlanDetails />} />
+    </Routes>
   );
 }
 

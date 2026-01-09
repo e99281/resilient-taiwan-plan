@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Leaf, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutSection: React.FC = () => {
   return (
@@ -57,10 +58,10 @@ const AboutSection: React.FC = () => {
             </div>
 
             <div className="mt-10">
-              <a href="#" className="inline-flex items-center text-teal-600 font-semibold hover:text-teal-700 group transition-all">
-                閱讀完整計畫緣起 
+              <Link to="/plan-details" className="inline-flex items-center text-teal-600 font-semibold hover:text-teal-700 group transition-all">
+                閱讀完整計畫緣起
                 <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
 

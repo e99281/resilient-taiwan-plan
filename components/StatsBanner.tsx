@@ -3,17 +3,15 @@ import { Users, Building2, Store, Map } from 'lucide-react';
 import { StatItem } from '../types';
 
 const stats: StatItem[] = [
-  { id: '1', value: '100,832', label: '防災士與培訓人次', iconName: 'users' },
-  { id: '2', value: '32', label: '韌性社區', iconName: 'building' },
-  { id: '3', value: '250', label: '企業合作簽署', iconName: 'store' },
-  { id: '4', value: '368', label: '防災地圖與計畫', iconName: 'map' },
+  { id: '1', value: '100,832', label: '防災士認證總人數', iconName: 'users' },
+  { id: '2', value: '32', label: '進階防災士認證總人數', iconName: 'building' },
+  { id: '3', value: '250', label: '韌性社區認證總數', iconName: 'store' }
 ];
 
 const IconMap = {
   users: Users,
   building: Building2,
-  store: Store,
-  map: Map,
+  store: Store
 };
 
 const StatsBanner: React.FC = () => {
@@ -23,7 +21,7 @@ const StatsBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center divide-y lg:divide-y-0 lg:divide-x divide-slate-800/50">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 text-center divide-y lg:divide-y-0 lg:divide-x divide-slate-800/50">
           {stats.map((stat) => {
             const Icon = IconMap[stat.iconName];
             return (
